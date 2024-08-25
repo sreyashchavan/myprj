@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static "blog/login.css"%}">
+    <title>Login</title>
+</head>
+<body>
+    <div class="login border">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="user">
+                <label for="username">Username</label>
+                <input type="text" name="username">
+            </div>
+            <div class="pass">
+                <label for="password">Password</label>
+                <input type="text" name="password">
+            </div>
+            <p><a href="{% url "register"%}">If you haven't registered yet please register</a></p>
+            <p class="error">{{error_message}}</p>
+            <button class="but">Login</button>
+        </form>
+    </div>
+</body>
+</html>

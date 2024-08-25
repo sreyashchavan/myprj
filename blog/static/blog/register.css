@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+    height: 100vh; 
+    display: flex; /* Use Flexbox */
+    
+}
+.border{
+    border: 2px transparent;
+    box-shadow: 0 5px 10px black;
+    border-radius: 0.5rem;
+}
+
+.fom{
+    width: 225px;
+    height:fit-content;
+    padding: 1rem;
+    margin: auto;
+    font-size: 13px;
+    
+    background-color: white;
+}
+
+label{
+    display: block;
+    margin-bottom: 5px;
+}
+input{
+    display: block;
+    margin-bottom: 5px;
+    width: 90%;
+}
+button{
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+}

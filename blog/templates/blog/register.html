@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href={% static "blog/register.css"%}>
+</head>
+<body>
+    <form class="fom border" action="" method="POST">
+        {% csrf_token %}
+        {% for fields in form %}
+            <div class="field">
+                {{fields.label_tag}}
+                {{fields}}
+                {{field.errors }}
+               
+            </div>
+        {% endfor %}
+        {% if is_equal%}
+            <p>Passwords do not match</p>
+        {% endif %}
+        <button>Register</button>
+    </form>
+</body>
+</html>
